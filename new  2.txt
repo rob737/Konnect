@@ -1,0 +1,31 @@
+ This is an attempt to effectively
+ utilize Hostel resources!
+ You can ask for help,advice etc but
+ it is a request to every user not
+ to post or indulge in any inappropriate
+ topics!
+ ANY SUGGESTION IS WELCOME!!
+ 
+ 
+ 
+ 
+ 
+ echo ' <h3>This is an attempt to effectively
+						 utilize Hostel resources!
+						 You can ask for help,advice etc but
+						 it is a request to every user not
+						 to post or indulge in any inappropriate
+						 topics!
+						 SUGGESTIONS ARE WELCOME!!</h3>'
+                echo '</td>';
+				
+				
+				
+				
+				
+				 echo '<table border="1">
+              <tr>
+                <th>Category</th>
+                <th>&nbsp&nbsp&nbsp&nbsp NOTE!</th>
+              </tr>';
+		

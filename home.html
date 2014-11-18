@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+body {background-image:url("home.jpg");}
+</style>
+<script language="JavaScript"> 
+var i = 0; 
+var path = new Array();  
+path[0] = "home2.jpg"; 
+path[1] = "home5.jpg"; 
+path[2] = "home3.jpg";
+path[3]="home4.jpg";
+path[4]="home1.jpg"; 
+function swapImage() 
+{ 
+document.slide.src = path[i]; 
+if(i < path.length - 1) 
+i++; 
+else i = 0; 
+setTimeout("swapImage()",1000); 
+} 
+window.onload=swapImage; 
+</script> 
+<img height="50%" name="slide" src="home5.jpg" width="50%" /> 
+</head>
+<body>
+<div>
+<a href="www.google.com">SIGN UP</a>
+<a href="www.google.com">LOGIN</a>
+</div>
+</body>
+</html>
+div:onload
+{
+width:500px;
+}

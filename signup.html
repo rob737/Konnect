@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<style> 
+	body {background-image:url("home.jpg");}
+	.sp {
+	color:white;
+	}
+	.boxed {
+	text-align:center;
+	}
+</style>
+	<title>SIGN UP</title>
+	<script type="text/javascript">
+		function validation()
+		{
+            var emailtext=document.validate.email.value;
+            var pattern=/^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+			var y=document.validate.year.value;
+			if(document.validate.name.value=="")
+			{
+			alert("PLEASE ENTER A NAME!");
+			document.validate.name.focus();
+			return false;
+			}
+			if(document.validate.room.value=="")
+			{
+			alert("PLEASE ENTER ROOM NUMBER!");
+			document.validate.name.focus();
+			return false;
+			}
+			if(document.validate.Username.value=="")
+			{
+			alert("PLEASE ENTER YOUR USN!");
+			document.validate.Username.focus();
+			return false;
+			}
+			if(document.validate.password.value=="")
+			{
+			alert("PLEASE ENTER A PASSWORD!");
+			document.validate.password.focus();
+			return false;
+			}
+			if(document.validate.cpassword.value=="")
+			{
+			alert("PLEASE ENTER SOMETHING!");
+			document.validate.cpassword.focus();
+			return false;
+			}
+			if(document.validate.email.value=="")
+			{
+			alert("PLEASE ENTER AN EMAIL!");
+			document.validate.email.focus();
+			return false;
+			}
+			if(document.validate.terms.checked==false)
+			{
+			alert("YOU HAVENT ACCEPTED THE TERMS AND CONDITIONS!!!! ");
+			document.validate.terms.focus();
+			return false;
+			}
+			if(document.validate.password.value!=document.validate.cpassword.value)
+			{
+			alert("PLEASE ENTER THE CORRECT PASSWORD AGAIN!");
+			return false;
+			}
+			
+			if(y<0)
+			{
+			alert("CONTACT UNACCEPTED");
+			return false;
+			}
+            
+            if(!(pattern.test(emailtext)))
+            {
+                alert("EMAIL ADDRESS INCORRECT!!!!!");
+                return false;
+            }
+			
+		}
+	</script>
+	</head>
+	
+	<body>
+		<div class="boxed">
+			<p><span class="sp">UPLOAD YOUR PHOTO HERE</span></p>
+			<img src="home1.jpg" height="180" width="180" >
+			</div><br>
+		<form name="validate" onsubmit="validation();">
+			<table align="center">
+				<tr>
+					<td><span class="sp">NAME</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name">
+				</tr>
+				<tr>
+					<td><span class="sp">ROOM</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="room">
+				</tr>
+				<tr>
+					<td><span class="sp">USN</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="Username"><span class="sp">(THIS WILL BE YOUR LOGIN ID)</span></td>
+				</tr>
+				<tr>
+					<td><span class="sp">PASSWORD</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" name="password">
+				</tr>
+				<tr>
+					<td><span class="sp">CONFIRM PASSWORD</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" name="cpassword">
+				</tr>
+				<tr>
+					<td><span class="sp">CONTACT</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="year">
+				</tr>
+				<tr>
+					<td><span class="sp">EMAIL</span></td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="email">
+				</tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="terms"</td>
+					<td><span class="sp">All information provided by me is correct!</span></td>
+				</tr>
+				<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="done">
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
